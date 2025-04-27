@@ -80,7 +80,7 @@ const Blogs = () => {
           <div
             className="courseCard"
             key={course.id}
-            onClick={() => handleCourseClick(course.id)}
+            // onClick={() => handleCourseClick(course.id)}
           >
             <h2>{course.topicTitle}</h2>
             <p>{course.description.length > 80 ? course.description.slice(0, 80) + "..." : course.description}</p>

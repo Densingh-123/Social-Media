@@ -28,14 +28,14 @@ const Navbar = () => {
         ) : (
           <DarkModeOutlinedIcon onClick={toggle} style={{ cursor: "pointer" }} />
         )}
-        <GridViewOutlinedIcon />
+        {/* <GridViewOutlinedIcon /> */}
         <div className="search">
           <SearchOutlinedIcon />
           <input type="text" placeholder="Search..." />
         </div>
       </div>
       <div className="right">
-        <EmailOutlinedIcon />
+        {/* <EmailOutlinedIcon /> */}
         <NotificationsOutlinedIcon />
         <div className="user">
           {currentUser?.profilePic ? (

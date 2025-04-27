@@ -11,7 +11,7 @@ export const AuthContextProvider = ({ children }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (user) {
-        const userRef = ref(rtdb, `users/${user.uid}`); // ✅ correct path
+        const userRef = ref(rtdb, `users/${user.uid}`); // ✅ correct path  
         const snapshot = await get(userRef);
 
         if (snapshot.exists()) {

@@ -36,10 +36,11 @@ const LeftBar = () => {
         <div className="menu">
           <span>Your shortcuts</span>
 
-          <div className="item">
-            <img src={Friends} alt="friends" />
-            <span>Friends</span>
-          </div>
+          <div className="item clickable" onClick={() => navigate("/connect")}>
+  <img src={Friends} alt="friends" />
+  <span>Connect</span>
+</div>
+
           <div className="item clickable" onClick={() => navigate("/blogs")}>
   <img src={Blogs} alt="blogs" />
   <span>Blogs</span>
@@ -53,7 +54,8 @@ const LeftBar = () => {
             <span>Generate Content</span>
           </div>
 
-          <div className="item">
+          <div  className="item clickable"
+            onClick={() => navigate("/")}>
             <img src={Messages} alt="messages" />
             <span>Messages</span>
           </div>

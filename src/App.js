@@ -1,3 +1,4 @@
+// App.js
 import { useContext } from "react";
 import { createBrowserRouter, RouterProvider, Navigate, Outlet } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
@@ -6,13 +7,14 @@ import "react-toastify/dist/ReactToastify.css";
 import Navbar from "./components/navbar/Navbar";
 import LeftBar from "./components/leftBar/LeftBar";
 import RightBar from "./components/rightBar/RightBar";
-
+import User from './pages/user/User.jsx'
 import Home from "./pages/home/Home";
 import Profile from "./pages/profile/Profile";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import Generate from "./pages/generate/Generate";
-import Blogs from "./pages/blogs/Blogs"; // <-- Import Blogs page!
+import Blogs from "./pages/blogs/Blogs";
+import Connect from "./pages/user/User.jsx"; // Add Connect import
 
 import { DarkModeContext } from "./context/darkModeContext";
 import { AuthContext } from "./context/authContext";
@@ -79,8 +81,12 @@ function App() {
           element: <Generate />,
         },
         {
-          path: "/blogs", // <-- Add this
+          path: "/blogs",
           element: <Blogs />,
+        },
+        {
+          path: "/connect", // Add route for Connect page
+          element: <Connect />,
         },
       ],
     },
@@ -96,6 +102,10 @@ function App() {
       path: "*",
       element: <Navigate to="/" replace />,
     },
+    {
+      path:"/user",
+      element:<User/>,
+    }
   ]);
 
   return <RouterProvider router={router} />;
