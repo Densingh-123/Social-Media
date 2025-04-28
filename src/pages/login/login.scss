@@ -4,20 +4,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px; // add padding for small screens
 
   .card {
-    width: 50%;
+    width: 100%;
+    max-width: 900px;
     display: flex;
     background-color: white;
     border-radius: 10px;
     min-height: 600px;
     overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 
     .left {
       flex: 1;
       background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)),
-        url("https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600")
-          center;
+        url("https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600") center;
       background-size: cover;
       padding: 50px;
       display: flex;
@@ -26,11 +28,10 @@
       color: white;
 
       h1 {
-        color: white;
-        font-size: 100px;
-        line-height: 100px;
+        font-size: 80px;
+        line-height: 80px;
       }
-      
+
       p {
         color: aliceblue;
       }
@@ -38,7 +39,7 @@
       span {
         font-size: 14px;
       }
-      
+
       button {
         width: 50%;
         padding: 10px;
@@ -59,20 +60,20 @@
       justify-content: center;
 
       h1 {
-      color: #555;
+        color: #555;
       }
-      
+
       form {
         display: flex;
         flex-direction: column;
         gap: 30px;
-        
+
         input {
-        border: none;
-        border-bottom: 1px solid lightgray;
-        padding: 20px 10px;
+          border: none;
+          border-bottom: 1px solid lightgray;
+          padding: 20px 10px;
         }
-        
+
         button {
           width: 50%;
           padding: 10px;
@@ -81,8 +82,41 @@
           color: white;
           font-weight: bold;
           cursor: pointer;
+          align-self: center;
+        }
+      }
+    }
+  }
+
+  // Responsive Design
+  @media (max-width: 768px) {
+    .card {
+      flex-direction: column;
+      min-height: auto;
+    }
+
+    .left {
+      display: none; // Hide image side on mobile
+    }
+
+    .right {
+      padding: 30px;
+      gap: 30px;
+
+      h1 {
+        text-align: center;
+      }
+
+      form {
+        input {
+          padding: 15px 10px;
+        }
+
+        button {
+          width: 100%;
         }
       }
     }
   }
 }
+
