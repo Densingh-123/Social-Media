@@ -129,11 +129,11 @@ const Share = () => {
             </label>
             <div className="item">
               <img src={Map} alt="Add Place" />
-              <span>Add Place (coming soon)</span>
+              <span>Add Place </span>
             </div>
             <div className="item">
               <img src={Friend} alt="Tag Friends" />
-              <span>Tag Friends (coming soon)</span>
+              <span>Tag Friends</span>
             </div>
           </div>
           <div className="right">
